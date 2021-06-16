@@ -16,9 +16,7 @@ function App() {
 
         getWords().then((res) => {
             const data = res.data;
-            setDataWords(data.data);
-            console.log(data);
-            console.log(dataWords);
+            setDataWords(data.data);            
         }).catch((e) => {
             console.log(e);
         })
@@ -38,8 +36,6 @@ function App() {
     }
 
     const onFilterSubstring = () => {
-        console.log(checked);
-        console.log(inputValue);
         let filteredWorlds;
         if (checked) {
             filteredWorlds = dataWords.filter((world) => world.indexOf(inputValue) !== -1 );            
